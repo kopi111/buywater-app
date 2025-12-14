@@ -1,5 +1,5 @@
 name: ncb_shop
-description: "NCB Shop - E-Commerce Mobile Application"
+description: "BuyWater - E-Commerce App for Water Delivery in Jamaica"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -23,9 +23,6 @@ dependencies:
   shared_preferences: ^2.2.3
   flutter_secure_storage: ^9.2.2
 
-  # NFC
-  nfc_manager: ^3.4.0
-
   # Image Handling
   cached_network_image: ^3.3.1
   image_picker: ^1.0.7
@@ -44,11 +41,6 @@ dependencies:
   # Utils
   intl: ^0.19.0
   uuid: ^4.3.3
-
-  # Firebase (for notifications & analytics)
-  firebase_core: ^2.27.1
-  firebase_messaging: ^14.7.20
-  firebase_analytics: ^10.8.10
 
   # Icons
   flutter_svg: ^2.0.10+1
