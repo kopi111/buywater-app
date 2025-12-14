@@ -1,0 +1,68 @@
+name: ncb_shop
+description: "NCB Shop - E-Commerce Mobile Application"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  provider: ^6.1.2
+
+  # HTTP & API
+  http: ^1.2.2
+  dio: ^5.4.0
+
+  # Local Storage
+  shared_preferences: ^2.2.3
+  flutter_secure_storage: ^9.2.2
+
+  # NFC
+  nfc_manager: ^3.4.0
+
+  # Image Handling
+  cached_network_image: ^3.3.1
+  image_picker: ^1.0.7
+
+  # UI Components
+  flutter_rating_bar: ^4.0.1
+  shimmer: ^3.0.0
+  badges: ^3.1.2
+
+  # Forms & Validation
+  email_validator: ^2.1.17
+
+  # Navigation
+  go_router: ^14.2.3
+
+  # Utils
+  intl: ^0.19.0
+  uuid: ^4.3.3
+
+  # Firebase (for notifications & analytics)
+  firebase_core: ^2.27.1
+  firebase_messaging: ^14.7.20
+  firebase_analytics: ^10.8.10
+
+  # Icons
+  flutter_svg: ^2.0.10+1
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/products/
+    - assets/icons/

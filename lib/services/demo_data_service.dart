@@ -1,0 +1,341 @@
+import '../models/product.dart';
+import '../models/user.dart';
+import '../models/order.dart';
+import '../models/address.dart';
+import '../models/cart.dart';
+
+class DemoDataService {
+  static User get demoUser => User(
+        id: 'demo_user_001',
+        email: 'demo@buywater.com',
+        firstName: 'Demo',
+        lastName: 'User',
+        phone: '876-555-1234',
+        createdAt: DateTime.now(),
+      );
+
+  static List<Category> get categories => [
+        Category(id: 'cat_1', name: 'Bottled Water', productCount: 12),
+        Category(id: 'cat_2', name: 'Gallon Jugs', productCount: 8),
+        Category(id: 'cat_3', name: 'Dispensers', productCount: 6),
+        Category(id: 'cat_4', name: 'Filters', productCount: 10),
+        Category(id: 'cat_5', name: 'Accessories', productCount: 15),
+        Category(id: 'cat_6', name: 'Ice', productCount: 5),
+      ];
+
+  static List<Product> get products => [
+        // Bottled Water
+        Product(
+          id: 'prod_001',
+          name: 'Pure Spring Water 500ml (24 Pack)',
+          description: 'Crystal clear spring water sourced from the Blue Mountains. Perfect for everyday hydration. Each pack contains 24 bottles of 500ml purified water.',
+          price: 1500.00,
+          discountPrice: 1299.00,
+          images: ['assets/images/products/prod_001.png'],
+          categoryId: 'cat_1',
+          categoryName: 'Bottled Water',
+          stockQuantity: 100,
+          rating: 4.8,
+          reviewCount: 156,
+          isFeatured: true,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_002',
+          name: 'Premium Alkaline Water 1L (12 Pack)',
+          description: 'High pH alkaline water for optimal hydration. Enhanced with minerals for better taste and health benefits.',
+          price: 2200.00,
+          images: ['assets/images/products/prod_002.png'],
+          categoryId: 'cat_1',
+          categoryName: 'Bottled Water',
+          stockQuantity: 75,
+          rating: 4.6,
+          reviewCount: 89,
+          isFeatured: true,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_003',
+          name: 'Sparkling Water 330ml (6 Pack)',
+          description: 'Refreshing sparkling water with fine bubbles. Zero calories, zero sugar. Perfect for any occasion.',
+          price: 950.00,
+          images: ['assets/images/products/prod_003.png'],
+          categoryId: 'cat_1',
+          categoryName: 'Bottled Water',
+          stockQuantity: 60,
+          rating: 4.5,
+          reviewCount: 67,
+          createdAt: DateTime.now(),
+        ),
+
+        // Gallon Jugs
+        Product(
+          id: 'prod_004',
+          name: '5 Gallon Water Jug (Refillable)',
+          description: 'BPA-free 5-gallon water jug. Compatible with most water dispensers. Easy grip handle for convenient carrying.',
+          price: 800.00,
+          images: ['assets/images/products/prod_004.png'],
+          categoryId: 'cat_2',
+          categoryName: 'Gallon Jugs',
+          stockQuantity: 200,
+          rating: 4.7,
+          reviewCount: 234,
+          isFeatured: true,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_005',
+          name: '3 Gallon Water Container',
+          description: 'Compact 3-gallon water container. Perfect for small offices or home use. Stackable design for easy storage.',
+          price: 600.00,
+          discountPrice: 499.00,
+          images: ['assets/images/products/prod_005.png'],
+          categoryId: 'cat_2',
+          categoryName: 'Gallon Jugs',
+          stockQuantity: 150,
+          rating: 4.4,
+          reviewCount: 98,
+          createdAt: DateTime.now(),
+        ),
+
+        // Dispensers
+        Product(
+          id: 'prod_006',
+          name: 'Hot & Cold Water Dispenser',
+          description: 'Premium water dispenser with hot and cold water options. LED indicators, child safety lock, and energy-saving mode.',
+          price: 15000.00,
+          discountPrice: 12999.00,
+          images: ['assets/images/products/prod_006.png'],
+          categoryId: 'cat_3',
+          categoryName: 'Dispensers',
+          stockQuantity: 25,
+          rating: 4.9,
+          reviewCount: 312,
+          isFeatured: true,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_007',
+          name: 'Countertop Water Dispenser',
+          description: 'Compact countertop dispenser. Room temperature and cold water. Perfect for small spaces.',
+          price: 8500.00,
+          images: ['assets/images/products/prod_007.png'],
+          categoryId: 'cat_3',
+          categoryName: 'Dispensers',
+          stockQuantity: 40,
+          rating: 4.5,
+          reviewCount: 145,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_008',
+          name: 'Manual Water Pump Dispenser',
+          description: 'Hand pump dispenser for gallon jugs. No electricity needed. Easy to install and use.',
+          price: 1200.00,
+          images: ['assets/images/products/prod_008.png'],
+          categoryId: 'cat_3',
+          categoryName: 'Dispensers',
+          stockQuantity: 100,
+          rating: 4.3,
+          reviewCount: 87,
+          createdAt: DateTime.now(),
+        ),
+
+        // Filters
+        Product(
+          id: 'prod_009',
+          name: 'Home Water Filter System',
+          description: '5-stage water filtration system. Removes 99.9% of contaminants. Easy DIY installation.',
+          price: 12000.00,
+          discountPrice: 9999.00,
+          images: ['assets/images/products/prod_009.png'],
+          categoryId: 'cat_4',
+          categoryName: 'Filters',
+          stockQuantity: 30,
+          rating: 4.8,
+          reviewCount: 201,
+          isFeatured: true,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_010',
+          name: 'Replacement Filter Cartridge (3 Pack)',
+          description: 'Compatible with most water filter systems. 6-month lifespan per cartridge.',
+          price: 3500.00,
+          images: ['assets/images/products/prod_010.png'],
+          categoryId: 'cat_4',
+          categoryName: 'Filters',
+          stockQuantity: 80,
+          rating: 4.6,
+          reviewCount: 156,
+          createdAt: DateTime.now(),
+        ),
+
+        // Accessories
+        Product(
+          id: 'prod_011',
+          name: 'Water Bottle Carrier (6 Pack)',
+          description: 'Convenient carrier for 500ml bottles. Durable handle, foldable design.',
+          price: 450.00,
+          images: ['assets/images/products/prod_011.png'],
+          categoryId: 'cat_5',
+          categoryName: 'Accessories',
+          stockQuantity: 200,
+          rating: 4.2,
+          reviewCount: 43,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_012',
+          name: 'Insulated Water Bottle 750ml',
+          description: 'Double-wall stainless steel bottle. Keeps drinks cold for 24 hours or hot for 12 hours.',
+          price: 2500.00,
+          discountPrice: 1999.00,
+          images: ['assets/images/products/prod_012.png'],
+          categoryId: 'cat_5',
+          categoryName: 'Accessories',
+          stockQuantity: 120,
+          rating: 4.7,
+          reviewCount: 189,
+          isFeatured: true,
+          createdAt: DateTime.now(),
+        ),
+
+        // Ice
+        Product(
+          id: 'prod_013',
+          name: 'Party Ice Bag 5kg',
+          description: 'Crystal clear ice cubes. Perfect for parties and events. Made from purified water.',
+          price: 500.00,
+          images: ['assets/images/products/prod_013.png'],
+          categoryId: 'cat_6',
+          categoryName: 'Ice',
+          stockQuantity: 300,
+          rating: 4.4,
+          reviewCount: 67,
+          createdAt: DateTime.now(),
+        ),
+        Product(
+          id: 'prod_014',
+          name: 'Crushed Ice 3kg',
+          description: 'Pre-crushed ice for cocktails and smoothies. Fast-freezing formula.',
+          price: 400.00,
+          images: ['assets/images/products/prod_014.png'],
+          categoryId: 'cat_6',
+          categoryName: 'Ice',
+          stockQuantity: 250,
+          rating: 4.3,
+          reviewCount: 45,
+          createdAt: DateTime.now(),
+        ),
+      ];
+
+  static List<Product> get featuredProducts =>
+      products.where((p) => p.isFeatured).toList();
+
+  static List<Address> get demoAddresses => [
+        Address(
+          id: 'addr_001',
+          userId: 'demo_user_001',
+          fullName: 'Demo User',
+          phone: '876-555-1234',
+          addressLine1: '123 Water Street',
+          city: 'Kingston',
+          parish: 'Kingston',
+          isDefault: true,
+          label: 'Home',
+        ),
+        Address(
+          id: 'addr_002',
+          userId: 'demo_user_001',
+          fullName: 'Demo User',
+          phone: '876-555-5678',
+          addressLine1: '456 Business Plaza',
+          addressLine2: 'Suite 200',
+          city: 'New Kingston',
+          parish: 'St. Andrew',
+          isDefault: false,
+          label: 'Work',
+        ),
+      ];
+
+  static List<Order> get demoOrders => [
+        Order(
+          id: 'order_demo_001',
+          userId: 'demo_user_001',
+          items: [
+            CartItem(
+              id: 'item_1',
+              product: products[0],
+              quantity: 2,
+            ),
+            CartItem(
+              id: 'item_2',
+              product: products[3],
+              quantity: 1,
+            ),
+          ],
+          shippingAddress: demoAddresses[0],
+          subtotal: 3598.00,
+          deliveryFee: 500.00,
+          total: 4098.00,
+          status: OrderStatus.delivered,
+          paymentStatus: PaymentStatus.completed,
+          paymentMethod: 'card',
+          createdAt: DateTime.now().subtract(const Duration(days: 7)),
+          deliveredAt: DateTime.now().subtract(const Duration(days: 5)),
+        ),
+        Order(
+          id: 'order_demo_002',
+          userId: 'demo_user_001',
+          items: [
+            CartItem(
+              id: 'item_3',
+              product: products[5],
+              quantity: 1,
+            ),
+          ],
+          shippingAddress: demoAddresses[1],
+          subtotal: 12999.00,
+          deliveryFee: 0,
+          total: 12999.00,
+          status: OrderStatus.shipped,
+          paymentStatus: PaymentStatus.completed,
+          paymentMethod: 'card',
+          trackingNumber: 'JM123456789',
+          createdAt: DateTime.now().subtract(const Duration(days: 2)),
+        ),
+      ];
+
+  static List<ProductReview> getProductReviews(String productId) {
+    return [
+      ProductReview(
+        id: 'rev_001',
+        productId: productId,
+        userId: 'user_001',
+        userName: 'John D.',
+        rating: 5.0,
+        comment: 'Excellent quality water! Fast delivery and great packaging.',
+        createdAt: DateTime.now().subtract(const Duration(days: 3)),
+      ),
+      ProductReview(
+        id: 'rev_002',
+        productId: productId,
+        userId: 'user_002',
+        userName: 'Sarah M.',
+        rating: 4.5,
+        comment: 'Good product, will order again. Price is reasonable.',
+        createdAt: DateTime.now().subtract(const Duration(days: 7)),
+      ),
+      ProductReview(
+        id: 'rev_003',
+        productId: productId,
+        userId: 'user_003',
+        userName: 'Mike T.',
+        rating: 4.0,
+        comment: 'Satisfied with the purchase. Delivery was on time.',
+        createdAt: DateTime.now().subtract(const Duration(days: 14)),
+      ),
+    ];
+  }
+}
